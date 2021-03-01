@@ -632,19 +632,17 @@ footer {
   pointer-events: none;
 }
 
-/* 
-.backdrop.is-hidden.modal {
-} */
-
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   max-width: 528px;
   min-height: 580px;
   padding: 40px;
   background-color: var(--bg-white);
+
+  transform: translate(-50%, -50%);
+  transition: transform 250ms var(--timing-function);
 }
 
 .btn-modal-close {
@@ -791,6 +789,7 @@ footer {
 
 .text-overlay {
   position: absolute;
+  margin: 63px 24px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.55;
