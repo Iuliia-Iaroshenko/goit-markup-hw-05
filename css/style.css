@@ -131,6 +131,7 @@ footer {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--black-text);
+  transition: color 250ms var(--timing-function);
 }
 
 .link.current {
@@ -154,7 +155,6 @@ footer {
 .site-nav a:hover,
 .site-nav a:focus {
   color: var(--blue-text);
-  transition: opacity 250ms var(--timing-function);
 }
 
 .contacts-icon {
@@ -184,6 +184,8 @@ footer {
   letter-spacing: 0.02em;
   color: var(--grey-text);
   white-space: nowrap;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .contacts-item {
@@ -245,6 +247,8 @@ footer {
   border: 0;
   border-radius: 4px;
   cursor: pointer;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .btn-order:hover,
@@ -355,11 +359,12 @@ footer {
   text-transform: uppercase;
   color: var(--white-text);
   background-color: var(--bg-directions-op80);
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .directions-item p:hover {
   opacity: 1;
-  transition: 250ms var(--timing-function);
 }
 
 /* Секция "Наша команда" */
@@ -435,6 +440,10 @@ footer {
   width: 44px;
   height: 44px;
   color: var(--icons);
+
+  transition-property: color, background-color, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .social-links-item a:hover,
@@ -442,7 +451,6 @@ footer {
   color: var(--white-text);
   background-color: var(--blue-text);
   border-radius: 100px;
-  transition: 250ms var(--timing-function);
 }
 
 .social-icon {
@@ -493,15 +501,18 @@ footer {
   width: 170px;
   height: 90px;
   border: 1px solid var(--icons);
-  box-sizing: border-box;
   border-radius: 4px;
+  box-sizing: border-box;
+
+  transition-property: color, border;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .clients-link:hover,
 .clients-link:focus {
   color: var(--blue-text);
   border: 1px solid var(--blue-text);
-  transition: 250ms var(--timing-function);
 }
 
 .clients-icon {
@@ -555,6 +566,8 @@ footer {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--white-text-op60);
+
+  transition: color 250ms var(--timing-function);
 }
 
 .contacts-footer a:hover,
@@ -594,6 +607,10 @@ footer {
   color: var(--white-text);
   background-color: var(--bg-links-op10);
   border-radius: 100px;
+
+  transition-property: color, background-color, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .sub-links-item a:hover,
@@ -601,7 +618,6 @@ footer {
   color: var(--white-text);
   background-color: var(--blue-text);
   border-radius: 100px;
-  transition: 250ms var(--timing-function);
 }
 
 .sub-icon {
@@ -623,13 +639,17 @@ footer {
   width: 100%;
   height: 100%;
   opacity: 1;
-  transform: opacity 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function);
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
 }
 
 .modal {
@@ -639,10 +659,9 @@ footer {
   max-width: 528px;
   min-height: 580px;
   padding: 40px;
-  background-color: var(--bg-white);
-
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-function);
+  background-color: var(--bg-white);
 }
 
 .btn-modal-close {
@@ -698,6 +717,10 @@ footer {
   border: 0;
   outline: none;
   cursor: pointer;
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .projects .btn:hover,
@@ -706,7 +729,6 @@ footer {
   background-color: var(--blue-text);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: 250ms var(--timing-function);
 }
 
 .visually-hidden {
@@ -730,6 +752,7 @@ footer {
   width: calc((100% - 60px) / 3);
   background-color: var(--bg-white);
   border: 1px solid var(--border-card);
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .card-item:nth-child(3n) {
